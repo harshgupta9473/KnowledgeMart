@@ -106,6 +106,10 @@ func EmailSignUp(w http.ResponseWriter, r *http.Request) {
 	// referral implementation is left
 
 
+
+	//
+
+
 	utils.WriteJSON(w,http.StatusOK,map[string]interface{}{
 		"status":  "success",
 		"message": "Account is Created Successfully, please login to complete your email verification",
@@ -218,6 +222,7 @@ func EmailLogin(w http.ResponseWriter,r *http.Request){
 		return
 	}
 
+	// /// // //
 	if User.ReferralCode == "" {
 		refCode := utils.GenerateRandomString(5)
 		User.ReferralCode = refCode
@@ -389,7 +394,7 @@ func SendOTPMail(email, otp string) error {
 	smtpPort := os.Getenv("smtpPort")
 
 	msg := []byte("Subject: Verify your email\n\n" +
-		fmt.Sprintf("Your OTP is %d", otp))
+		fmt.Sprintf("Your OTP is %s", otp))
 
 	auth := smtp.PlainAuth("", from, password, smtpHost)
 	return smtp.SendMail(smtpHost+":"+smtpPort, auth, from, []string{email}, []byte(msg))

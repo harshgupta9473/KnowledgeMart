@@ -63,7 +63,7 @@ type Product struct {
 	Name         string         `gorm:"type:varchar(255)" validate:"required" json:"name"`
 	CategoryID   uint           `gorm:"not null; constraint:OnDelete:CASCADE;" json:"categoryId"`
 	Description  string         `gorm:"type:varchar(255)" validate:"required" json:"description"`
-	Availability string         `gorm:"type:bool;default:true" json:"availabilty"`
+	Availability bool         `gorm:"type:bool;default:true" json:"availabilty"`
 	Price        float64        `gorm:"type:decimal(10,2);not null" validate:"required" json:"price"`
 	OfferAmount  float64        `gorm:"type:decimal(10,2);not null" validate:"required" json:"offer_amount"`
 	Image        pq.StringArray `gorm:"type:varchar(255)[]" validate:"required" json:"image_url"`

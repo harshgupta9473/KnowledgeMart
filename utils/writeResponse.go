@@ -7,6 +7,6 @@ import (
 
 func WriteJSON(w http.ResponseWriter, status int, response any) {
 	w.Header().Set("Content-Type", "application/json")
-	w.WriteHeader(http.StatusInternalServerError)
+	w.WriteHeader(status)
 	json.NewEncoder(w).Encode(response)
 }

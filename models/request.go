@@ -24,7 +24,7 @@ type SellerLoginRequest struct {
 	UserName string `form:"" username:"required" json:"username"`
 	Password string `form:"password" validate:"required" json:"password"`
 }
-
+//
 type EmailVerificationRequest struct{
 	Email string `json:"email" validate:"required,email"`
 	OTP  string  `json:"otp" validate:"required"`

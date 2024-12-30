@@ -8,7 +8,7 @@ import (
 	"github.com/harshgupta9473/NotesCart/utils"
 	"gorm.io/gorm"
 )
-
+//
 func GetUserProfile(w http.ResponseWriter,r *http.Request){
 	var user models.User
 

@@ -37,7 +37,7 @@ func Authenticate(next http.Handler)http.Handler{
 			"message": fmt.Sprintf("Token validation failed:%v",err),
         })
         return
-    }
+    }//
     switch claims.Role{
     case "user":
        r= r.WithContext(context.WithValue(r.Context(),utils.UserID,claims.ID))

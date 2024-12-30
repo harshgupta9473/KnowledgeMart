@@ -184,3 +184,4 @@ func SellerLogin(w http.ResponseWriter,r *http.Request){
     
 
 }
+//

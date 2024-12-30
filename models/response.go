@@ -23,5 +23,5 @@ type ProductResponse struct {
 	SellerName string `json:"sellername"`
 	CategoryID uint `json:"categoryid"`
 	SellerRating float64 `json:"sellerRating"`
-}
+}//
 

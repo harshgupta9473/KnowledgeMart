@@ -11,4 +11,4 @@ func GetIDFROMContext(r *http.Request,ctx contextKey)(error,uint) {
 		return fmt.Errorf("Unauthorized:Could not retrive user information"),0
 	}
 	return nil,id
-}
+}//

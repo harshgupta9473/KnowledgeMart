@@ -45,7 +45,7 @@ type Seller struct {
 	AverageRating float64 `gorm:"type:decimal(10,2)" json:"averageRating"`
 
 	User User `gorm:"foreignKey:UserID"`
-}
+}//
 
 type Category struct {
 	gorm.Model
